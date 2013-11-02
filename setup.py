@@ -26,10 +26,7 @@ setup(name='selector',
       license="MIT",
       py_modules=['selector'],
       packages=[],
-      install_requires="""
-        wsgiref
-        resolver
-        """,
+      install_requires=['resolver'],
       keywords="wsgi delegation routing web http rest webapps",
       classifiers=[
         'Development Status :: 3 - Alpha',
