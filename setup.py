@@ -3,7 +3,8 @@
 from setuptools import setup
 
 
-version = '0.10.0' # don't read version from file, that's bytes
+with open('VERSION', 'r') as version_file:
+    version = version_file.read().strip()
 
 setup(name='selector',
       version=version,
