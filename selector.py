@@ -21,16 +21,16 @@ def method_not_allowed(environ, start_response):
     start_response("405 Method Not Allowed",
                    [('Allow', ', '.join(environ['selector.methods'])),
                     ('Content-Type', 'text/plain')])
-    return ["405 Method Not Allowed\n\n"
-            "The method specified in the Request-Line is not allowed "
-            "for the resource identified by the Request-URI."]
+    return [b"405 Method Not Allowed\n\n"
+            b"The method specified in the Request-Line is not allowed "
+            b"for the resource identified by the Request-URI."]
 
 
 def not_found(environ, start_response):
     """Default WSGI 404 app."""
     start_response("404 Not Found", [('Content-Type', 'text/plain')])
-    return ["404 Not Found\n\n"
-            "The server has not found anything matching the Request-URI."]
+    return [b"404 Not Found\n\n"
+            b"The server has not found anything matching the Request-URI."]
 
 
 class Selector(object):
